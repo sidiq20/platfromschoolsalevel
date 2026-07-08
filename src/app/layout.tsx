@@ -3,8 +3,14 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import "./globals.css";
 
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL 
+  ? process.env.NEXT_PUBLIC_BASE_URL 
+  : process.env.VERCEL_URL 
+    ? `https://${process.env.VERCEL_URL}` 
+    : "http://localhost:3000";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://platformschoolsalevel.com"),
+  metadataBase: new URL(baseUrl),
   title: {
     default: "Platform College — Cambridge A-Level School in Lagos",
     template: "%s | Platform College"
