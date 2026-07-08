@@ -1,11 +1,8 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL 
-    ? process.env.NEXT_PUBLIC_BASE_URL 
-    : process.env.VERCEL_URL 
-      ? `https://${process.env.VERCEL_URL}` 
-      : "http://localhost:3000";
+  // Fallback to Vercel domain or use custom env variable
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://platfromschoolsalevel.vercel.app";
 
   return [
     {

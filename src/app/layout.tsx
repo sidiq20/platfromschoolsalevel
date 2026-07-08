@@ -3,14 +3,11 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import "./globals.css";
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL 
-  ? process.env.NEXT_PUBLIC_BASE_URL 
-  : process.env.VERCEL_URL 
-    ? `https://${process.env.VERCEL_URL}` 
-    : "http://localhost:3000";
+// Fallback to Vercel domain or use custom env variable
+const domain = process.env.NEXT_PUBLIC_SITE_URL || "https://platfromschoolsalevel.vercel.app";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
+  metadataBase: new URL(domain),
   title: {
     default: "Platform College — Cambridge A-Level School in Lagos",
     template: "%s | Platform College"
@@ -42,15 +39,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_NG",
-    url: baseUrl,
+    url: domain,
     title: "Platform College — Cambridge A-Level School",
     description: "Where Nigeria's best students come to fly. Cambridge-accredited. Three campuses in Lagos.",
     siteName: "Platform College",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Platform College — Cambridge A-Level School",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Platform College — Cambridge A-Level School",
     description: "Where Nigeria's best students come to fly. Cambridge-accredited. Three campuses in Lagos.",
+    images: ["/og-image.png"],
   },
 };
 
