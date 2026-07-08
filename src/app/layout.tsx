@@ -46,20 +46,11 @@ export const metadata: Metadata = {
     title: "Platform College — Cambridge A-Level School",
     description: "Where Nigeria's best students come to fly. Cambridge-accredited. Three campuses in Lagos.",
     siteName: "Platform College",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Platform College — Cambridge A-Level School",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Platform College — Cambridge A-Level School",
     description: "Where Nigeria's best students come to fly. Cambridge-accredited. Three campuses in Lagos.",
-    images: ["/og-image.png"],
   },
 };
 
