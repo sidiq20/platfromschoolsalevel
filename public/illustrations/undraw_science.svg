@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 150" width="100%" height="100%" role="img">
+  <circle cx="100" cy="75" r="55" fill="#EEF2FF" />
+  <!-- Beaker flask -->
+  <path d="M92 40 h16 v20 l22 45 c3 6, -2 15, -10 15 H80 c-8 0, -13 -9, -10 -15 l22 -45 Z" fill="#FFFFFF" stroke="#1A4DAB" stroke-width="3" stroke-linejoin="round" />
+  <!-- Liquid inside -->
+  <path d="M76 100 l48 0 l-8 15 H84 Z" fill="#DC2626" />
+  <!-- Science bubbles -->
+  <circle cx="95" cy="75" r="4" fill="#DC2626" />
+  <circle cx="105" cy="60" r="5" fill="#DC2626" />
+  <circle cx="100" cy="30" r="3.5" fill="#1A4DAB" />
+</svg>
