@@ -4,14 +4,47 @@ import { Footer } from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Platform College — Cambridge A-Level School in Lagos",
+  metadataBase: new URL("https://platformschoolsalevel.com"),
+  title: {
+    default: "Platform College — Cambridge A-Level School in Lagos",
+    template: "%s | Platform College"
+  },
   description:
     "Platform College offers Cambridge AS & A Level education in Lagos, Nigeria. Unrivalled results, expert faculty, three campuses. Apply for 2026/2027.",
-  keywords: "Cambridge A-Level Lagos, Platform College, sixth form Nigeria, IGCSE Lagos",
+  keywords: [
+    "Cambridge A-Level Lagos",
+    "Platform College",
+    "sixth form Nigeria",
+    "IGCSE Lagos",
+    "A Level Direct Entry",
+    "Best Sixth Form Lagos"
+  ],
+  authors: [{ name: "Platform College" }],
+  creator: "Platform College",
+  publisher: "Platform Schools Group",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
+    type: "website",
+    locale: "en_NG",
+    url: "https://platformschoolsalevel.com",
     title: "Platform College — Cambridge A-Level School",
     description: "Where Nigeria's best students come to fly. Cambridge-accredited. Three campuses in Lagos.",
-    type: "website",
+    siteName: "Platform College",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Platform College — Cambridge A-Level School",
+    description: "Where Nigeria's best students come to fly. Cambridge-accredited. Three campuses in Lagos.",
   },
 };
 
