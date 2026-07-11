@@ -14,12 +14,6 @@ const fade = (delay = 0) => ({
 
 const highlights = [
   {
-    icon: Trophy,
-    title: "National Chess Champions",
-    body: "Platform Schools has produced Nigeria's No.1 ranked chess player and won national competitions three years running.",
-    tag: "Sports & Strategy",
-  },
-  {
     icon: GraduationCap,
     title: "Science Olympiad Winners",
     body: "Our science teams consistently top national competitions, presenting original research to judging panels from top universities.",
