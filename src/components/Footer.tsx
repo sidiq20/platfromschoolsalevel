@@ -26,7 +26,6 @@ const footerLinks = {
   Explore: [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
-    { label: "Results", href: "/results" },
     { label: "Campus Life", href: "/campus-life" },
     { label: "News", href: "/news" },
     { label: "Contact", href: "/contact" },
@@ -49,11 +48,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-4 mb-6">
-              <Image src="/icon.png" alt="Platform College Logo" width={48} height={48} className="w-12 h-12 object-contain" />
-              <div className="flex flex-col leading-none">
-                <span className="font-body font-black text-[22px] tracking-[0.12em] text-white uppercase">Platform</span>
-                <span className="font-body font-light text-[14px] tracking-[0.18em] text-crimson uppercase">College</span>
-              </div>
+              <Image src="/platformalevellogo.png" alt="Platform College Logo" width={180} height={48} className="w-auto h-12 object-contain" />
             </Link>
             <p className="font-display italic text-[17px] text-white/50 leading-relaxed mb-8">
               Cambridge AS & A Level education in Lagos, Nigeria.

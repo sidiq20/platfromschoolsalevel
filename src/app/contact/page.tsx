@@ -109,27 +109,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Three campuses */}
-      <section className="bg-off-white border-t border-hairline py-20 px-6 lg:px-10">
-        <div className="max-w-[1280px] mx-auto">
-          <h2 className="font-display text-[clamp(24px,3vw,36px)] text-navy mb-10">Our Campuses</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-            {[
-              { name: "Baruwa Campus", location: "12/14 Platform Way, Baruwa, Ipaja" },
-              { name: "Idimu Campus",  location: "Platform Schools, Idimu, Lagos" },
-              { name: "Iyana Ipaja",   location: "Platform Schools, Iyana Ipaja, Lagos" },
-            ].map((campus, i) => (
-              <div key={i} className="bg-white border border-hairline p-8">
-                <div className="w-8 h-8 bg-crimson flex items-center justify-center mb-6">
-                  <MapPin className="w-4 h-4 text-white" />
-                </div>
-                <h3 className="font-body font-bold text-[16px] text-navy mb-2">{campus.name}</h3>
-                <p className="font-body text-[13px] text-iron">{campus.location}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
     </div>
   );
 }

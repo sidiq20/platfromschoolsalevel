@@ -182,7 +182,7 @@ export default function AdmissionsPage() {
         <div className="max-w-[1280px] mx-auto">
           <h2 className="font-display text-[clamp(28px,3vw,40px)] text-navy mb-4">Fees & Funding</h2>
           <p className="font-body text-[16px] text-iron mb-12 max-w-xl">
-            Fees vary by programme and campus. Contact us for a full breakdown — we are happy to discuss in confidence.
+            Fees vary by programme. Contact us for a full breakdown — we are happy to discuss in confidence.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             {["Tuition", "Boarding (Optional)", "Cambridge Exam Fees"].map((fee, i) => (

@@ -34,7 +34,7 @@ const highlights = [
   {
     icon: Users,
     title: "A Thriving Community",
-    body: "Three campuses, one family. Platform students build lifelong networks through a culture of collaboration, discipline and ambition.",
+    body: "Platform students build lifelong networks through a culture of collaboration, discipline and ambition.",
     tag: "Community & Culture",
   },
 ];
@@ -53,7 +53,7 @@ export default function CampusLifePage() {
             More Than <span className="italic text-crimson">Just Study.</span>
           </h1>
           <p className="font-body font-light text-[18px] text-iron leading-relaxed max-w-md">
-            At Platform, academic brilliance meets co-curricular excellence. Discover the full richness of student life across all three of our Lagos campuses.
+            At Platform, academic brilliance meets co-curricular excellence. Discover the full richness of student life.
           </p>
           <a
             href="https://www.platformschools.org"
@@ -109,7 +109,7 @@ export default function CampusLifePage() {
         <div className="max-w-[1280px] mx-auto">
           <motion.div {...fade(0)} className="mb-14">
             <span className="font-body font-semibold text-[11px] text-crimson uppercase tracking-[0.16em]">Life on Campus</span>
-            <h2 className="font-display text-[clamp(28px,3vw,44px)] text-navy mt-3">Three Campuses. One Standard.</h2>
+            <h2 className="font-display text-[clamp(28px,3vw,44px)] text-navy mt-3">One Standard.</h2>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 auto-rows-[320px] gap-3">
@@ -118,7 +118,7 @@ export default function CampusLifePage() {
               <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent" />
               <div className="absolute bottom-0 left-0 p-6">
                 <p className="font-body font-bold text-white text-[14px]">A-Level Cohort</p>
-                <p className="font-body text-white/60 text-[12px]">Platform College — Main Campus</p>
+                <p className="font-body text-white/60 text-[12px]">Platform College</p>
               </div>
             </motion.div>
             <motion.div {...fade(0.07)} className="relative overflow-hidden border border-hairline bento-hover">

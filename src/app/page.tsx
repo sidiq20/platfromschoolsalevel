@@ -54,10 +54,10 @@ export default function Home() {
   const faqs = [
     { q: "What programmes does Platform College offer?", a: "We offer Cambridge AS & A Levels (1 or 2 years), A' Level Direct Entry, and a University Foundation Programme — all internationally recognised pathways to top universities." },
     { q: "What are the entry requirements?", a: "Applicants need a minimum of 5 credits in WAEC, NECO, or IGCSE including Mathematics and English Language. Specific subject requirements apply per programme track." },
-    { q: "When are admissions open?", a: "Admissions for the 2026/2027 academic year are currently open. Entrance assessments are ongoing — apply early as places are limited across all campuses." },
+    { q: "When are admissions open?", a: "Admissions for the 2026/2027 academic year are currently open. Entrance assessments are ongoing — apply early as places are limited." },
     { q: "Which universities have your students been admitted to?", a: "Our alumni hold offers from universities including University of Cambridge, Imperial College London, LSE, University of Toronto, MIT, and top Nigerian institutions." },
-    { q: "How do I register for the entrance exam?", a: "You can register via our online admissions portal or visit any of our three campuses in Ipaja, Ayobo, or Ikola. WhatsApp us at +234 905 302 8880 for a guided walkthrough." },
-    { q: "Does Platform College offer boarding?", a: "We currently operate as a day school across all three campuses. For full details on campus facilities and schedules, visit the main Platform Schools website." },
+    { q: "How do I register for the entrance exam?", a: "You can register via our online admissions portal. WhatsApp us at +234 905 302 8880 for a guided walkthrough." },
+    { q: "Does Platform College offer boarding?", a: "We currently operate as a day school. For full details on facilities and schedules, visit the main Platform Schools website." },
   ];
 
   useEffect(() => {
@@ -141,7 +141,7 @@ export default function Home() {
             <p className="font-body text-[17px] font-light text-iron leading-relaxed max-w-[480px] mb-12">
               Platform College delivers Cambridge AS & A Level education
               that places students into the world&apos;s best universities.
-              Three campuses. Expert faculty. Zero compromise.
+              Expert faculty. Zero compromise.
             </p>
           </motion.div>
 
@@ -173,25 +173,6 @@ export default function Home() {
         >
           <Image src="/full_a_level_students.jpg" alt="Platform College Students" fill className="object-cover" priority />
 
-          {/* Floating Award Card */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.9 }}
-            className="absolute bottom-10 left-8 bg-white border border-hairline shadow-lg p-5 flex items-center gap-4 w-[300px]"
-          >
-            <div className="w-10 h-10 bg-gold-bg flex items-center justify-center shrink-0">
-              <Trophy className="w-5 h-5 text-gold" />
-            </div>
-            <div>
-              <p className="font-body font-bold text-[13px] text-navy leading-snug">
-                Best Secondary School in Nigeria
-              </p>
-              <p className="font-body text-[11px] text-smoke mt-0.5">
-                Prestige Africa Awards 2025
-              </p>
-            </div>
-          </motion.div>
 
           {/* Floating Stat Chip */}
           <motion.div
@@ -256,11 +237,9 @@ export default function Home() {
             <div key={idx} className="flex items-center gap-16 pr-16 shrink-0">
               {[
                 "100% Cambridge Pass Rate",
-                "Best School in Nigeria 2025",
                 "Cambridge Accredited Since 2017",
                 "Placements: UK · USA · Canada",
                 "Admissions Open 2026/2027",
-                "No.1 Chess in Nigeria 2025",
               ].map((item) => (
                 <span key={item} className="flex items-center gap-3 font-body font-semibold text-[11px] text-navy uppercase tracking-[0.1em]">
                   <span className="w-1 h-1 bg-crimson shrink-0" />
@@ -279,7 +258,7 @@ export default function Home() {
         <div className="grid grid-cols-2 md:grid-cols-4 border border-hairline divide-x divide-y divide-hairline">
           {[
             { num: "15+", label: "Years of Excellence", icon: Award },
-            { num: "3",   label: "Lagos Campuses",      icon: Building2 },
+            { num: "50+", label: "Expert Tutors", icon: Building2 },
             { num: "100%",label: "Cambridge Pass Rate", icon: Trophy },
             { num: "500+",label: "Alumni Worldwide",    icon: Globe },
           ].map((stat, i) => (
@@ -463,111 +442,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════════
-          RESULTS TEASER
-      ══════════════════════════════════════════ */}
-      <section className="max-w-[1280px] mx-auto px-6 lg:px-10 py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Left */}
-          <motion.div {...fadeUp(0)}>
-            <span className="font-body font-semibold text-[11px] text-crimson uppercase tracking-[0.16em]">
-              Exam Results
-            </span>
-            <h2 className="font-display text-[clamp(36px,4vw,56px)] text-navy mt-3 mb-8">
-              Proof is in the Performance.
-            </h2>
-            <p className="font-body text-[17px] font-light text-iron leading-relaxed mb-10">
-              Every year. Without exception. Our students do not just pass their Cambridge examinations — they lead nationally.
-            </p>
-            <div className="flex flex-col gap-4 mb-10">
-              {[
-                "100% pass rate — every cohort, every year",
-                "Multiple A* and Top in World distinctions",
-                "Alumni in UK, US, Canadian and Nigerian universities",
-              ].map((point) => (
-                <div key={point} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-crimson shrink-0 mt-0.5" />
-                  <span className="font-body text-[15px] text-iron">{point}</span>
-                </div>
-              ))}
-            </div>
-            <Button size="lg" variant="ghost" asChild>
-              <Link href="/results">View Full Results →</Link>
-            </Button>
-          </motion.div>
 
-          {/* Right — Bento 2x2 */}
-          <div className="grid grid-cols-2 gap-3">
-            {[
-              { grade: "4A*", name: "Michael Dada", dest: "Imperial College London", bg: "bg-navy text-white" },
-              { grade: "3A*1A", name: "Ayeni Faith", dest: "University of Lagos Medicine", bg: "bg-off-white text-navy" },
-              { grade: "2A*2A", name: "David Emmanuel", dest: "University of Toronto", bg: "bg-off-white text-navy" },
-              { grade: "5A", name: "Sarah Okafor", dest: "LSE Economics", bg: "bg-crimson text-white" },
-            ].map((result, i) => (
-              <motion.div
-                key={i}
-                {...fadeUp(i * 0.07)}
-                className={`${result.bg} border border-hairline p-6 flex flex-col justify-between aspect-square bento-hover`}
-              >
-                <span className="font-display text-[40px] md:text-[48px] leading-none">
-                  {result.grade}
-                </span>
-                <div>
-                  <p className="font-body font-bold text-[14px] mb-0.5">{result.name}</p>
-                  <p className="font-body text-[12px] opacity-70">{result.dest}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════════
-          MAIN SCHOOL REDIRECT
-      ══════════════════════════════════════════ */}
-      <section className="py-24 px-6 lg:px-10">
-        <div className="max-w-[1280px] mx-auto">
-          <motion.div
-            {...fadeUp(0)}
-            className="relative overflow-hidden border border-hairline bg-navy grid grid-cols-1 lg:grid-cols-2"
-          >
-            {/* Left image strip */}
-            <div className="relative min-h-[300px] lg:min-h-0 overflow-hidden">
-              <Image src="/alevelstudents.jpg" alt="Platform Schools Campus" fill className="object-cover object-center" />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-navy/60 hidden lg:block" />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/70 to-transparent lg:hidden" />
-            </div>
-            {/* Right content */}
-            <div className="p-10 lg:p-16 flex flex-col justify-center gap-6">
-              <span className="font-body font-semibold text-[11px] text-crimson uppercase tracking-[0.16em]">Platform Schools Group</span>
-              <h2 className="font-display text-[clamp(28px,3vw,44px)] text-white leading-tight">
-                Discover the Full <span className="italic text-crimson">Platform Experience.</span>
-              </h2>
-              <p className="font-body font-light text-[15px] text-white/70 leading-relaxed max-w-md">
-                From Nursery to Secondary, Platform Schools Group has been shaping futures across Lagos for over 15 years. Visit the main website to explore our campuses, programmes, and student life.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                <a
-                  href="https://www.platformschools.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 h-[52px] px-8 bg-crimson text-white font-body font-semibold text-[13px] hover:bg-[#a0182f] transition-colors"
-                >
-                  Visit Platform Schools <ExternalLink className="w-4 h-4" />
-                </a>
-                <a
-                  href="https://www.platformschools.org/news"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 h-[52px] px-8 border border-white/30 text-white font-body font-semibold text-[13px] hover:bg-white/10 transition-colors"
-                >
-                  Read the Latest News <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* ══════════════════════════════════════════
           ADMISSIONS CTA

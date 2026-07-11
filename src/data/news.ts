@@ -51,7 +51,7 @@ The chess team performed exceptionally well, demonstrating critical thinking, pa
   {
     id: "digital-learning-hub",
     cat: "Academic",
-    title: "New Digital Learning Hub Launched at Ikola Campus",
+    title: "New Digital Learning Hub Launched",
     date: "MAR 30, 2026",
     excerpt: "We are proud to unveil our new state-of-the-art Digital Learning Hub, designed to equip students with 21st-century tech skills.",
     content: `We are proud to unveil our new state-of-the-art Digital Learning Hub, designed to equip students with 21st-century tech skills.
@@ -65,8 +65,8 @@ The facility features the latest in educational technology, coding workstations,
     cat: "Community",
     title: "Parents and Teachers Association (PTA) General Meeting",
     date: "MAR 10, 2026",
-    excerpt: "A summary of the key decisions and updates from our recent PTA meeting held across all three campuses.",
-    content: `A summary of the key decisions and updates from our recent PTA meeting held across all three campuses.
+    excerpt: "A summary of the key decisions and updates from our recent PTA meeting.",
+    content: `A summary of the key decisions and updates from our recent PTA meeting.
 
 We discussed the upcoming academic calendar, planned improvements to our transport fleet, and new extracurricular initiatives. Thank you to all parents who attended and contributed to the fruitful discussions.`,
     featured: false,
@@ -80,7 +80,7 @@ We discussed the upcoming academic calendar, planned improvements to our transpo
     excerpt: "Applications are now being accepted for the next academic session. Find out more about our entry process and key deadlines.",
     content: `Applications are now being accepted for the next academic session. Find out more about our entry process and key deadlines.
 
-We invite prospective parents to visit our campuses for a guided tour and to learn more about our unique curriculum and facilities. Entrance exams will be scheduled throughout the coming months.`,
+We invite prospective parents to visit us for a guided tour and to learn more about our unique curriculum and facilities. Entrance exams will be scheduled throughout the coming months.`,
     featured: false,
     image: "https://www.platformschools.org/images/student-in-ishefun-campus.jpg",
   },

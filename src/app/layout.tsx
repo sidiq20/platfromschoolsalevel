@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | Platform College"
   },
   description:
-    "Platform College offers Cambridge AS & A Level education in Lagos, Nigeria. Unrivalled results, expert faculty, three campuses. Apply for 2026/2027.",
+    "Platform College offers Cambridge AS & A Level education in Lagos, Nigeria. Unrivalled results, expert faculty. Apply for 2026/2027.",
   keywords: [
     "Cambridge A-Level Lagos",
     "Platform College",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     locale: "en_NG",
     url: domain,
     title: "Platform College — Cambridge A-Level School",
-    description: "Where Nigeria's best students come to fly. Cambridge-accredited. Three campuses in Lagos.",
+    description: "Where Nigeria's best students come to fly. Cambridge-accredited.",
     siteName: "Platform College",
     images: [
       {
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Platform College — Cambridge A-Level School",
-    description: "Where Nigeria's best students come to fly. Cambridge-accredited. Three campuses in Lagos.",
+    description: "Where Nigeria's best students come to fly. Cambridge-accredited.",
     images: ["/og-image.png"],
   },
 };

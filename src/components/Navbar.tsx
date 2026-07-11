@@ -17,7 +17,6 @@ const navLinks = [
       { label: "Direct Entry A Level",               href: "/programmes/direct-entry" },
     ],
   },
-  { label: "Results",      href: "/results" },
   { label: "Campus Life",  href: "/campus-life" },
   { label: "About",        href: "/about" },
   { label: "News",         href: "/news" },
@@ -44,11 +43,7 @@ export function Navbar() {
         <div className="max-w-[1280px] mx-auto px-6 lg:px-10 h-[68px] flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <Image src="/icon.png" alt="Platform College Logo" width={32} height={32} className="w-8 h-8 object-contain" />
-            <div className="flex flex-col leading-none">
-              <span className="font-body font-black text-[15px] tracking-[0.12em] text-navy uppercase">Platform</span>
-              <span className="font-body font-light text-[11px] tracking-[0.18em] text-crimson uppercase">College</span>
-            </div>
+            <Image src="/platformalevellogo.png" alt="Platform College Logo" width={160} height={40} className="w-auto h-10 object-contain" />
           </Link>
 
           {/* Desktop Nav */}

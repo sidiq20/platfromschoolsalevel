@@ -37,30 +37,6 @@ const team = [
     note: "Visionary leader architecting Platform's legacy of excellence and holistic education.",
     img: "/team/dr-dola-obe.jpg",
   },
-  {
-    name: "Mrs. Olayemi Obe",
-    role: "Proprietress of Platform Schools",
-    note: "Dedicated to nurturing the potential of every child through character development and academic rigor.",
-    img: "/team/mrs-obe.jpg",
-  },
-  {
-    name: "Mrs. Lois Afolayan",
-    role: "Group Head of Schools",
-    note: "Strategic academic leader ensuring consistent educational standards across all campuses.",
-    img: "/team/mrs-afolayan.jpg",
-  },
-  {
-    name: "Mrs. Bunmi Bamgbose",
-    role: "Head of Human Resources",
-    note: "Championing staff welfare and professional development to cultivate a world-class teaching faculty.",
-    img: "/team/mrs-bamgbose.jpg",
-  },
-  {
-    name: "Dr. Olusegun Exradallenum Akinsanya",
-    role: "School Counsellor",
-    note: "Expertly guiding students through their academic and personal journeys.",
-    img: "/team/dr-olusegun-akinsanya-school-counsellor.jpg",
-  },
 ];
 
 export default function AboutPage() {
@@ -76,15 +52,23 @@ export default function AboutPage() {
             Founded with a singular vision: provide Cambridge education in Lagos that rivals the best sixth-form colleges in the United Kingdom.
           </p>
         </div>
-        {/* Intro Video */}
-        <div className="relative min-h-[360px] lg:min-h-0 border-b border-hairline overflow-hidden bg-navy flex items-center justify-center">
-          <iframe
-            src="https://drive.google.com/file/d/1pHUF5qjuJ7zqHA5cSS9LHmNXt4gdY3Ke/preview"
-            className="absolute inset-0 w-full h-full"
-            allow="autoplay"
-            allowFullScreen
-            title="Platform College Introduction"
-          />
+        {/* Director's Voice */}
+        <div className="relative min-h-[360px] lg:min-h-0 border-b border-hairline overflow-hidden bg-navy flex flex-col items-center justify-center text-center p-10">
+          <Quote className="w-8 h-8 text-white/20 mb-6" />
+          <p className="font-body font-light text-[18px] text-white/90 leading-relaxed mb-8 max-w-md">
+            "At Platform College, we are committed to providing world-class Cambridge education. 
+            Our A-Level program is designed to challenge students, build character, and prepare them 
+            for the best universities globally. We believe in your potential."
+          </p>
+          <div className="flex items-center gap-4 pt-6 border-t border-white/10 w-full max-w-sm justify-center">
+            <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-crimson shrink-0">
+              <Image src="/team/dr-dola-obe.jpg" alt="Dr. Bola Obe" fill className="object-cover object-top" />
+            </div>
+            <div className="text-left">
+              <p className="font-body font-bold text-white text-[14px]">Dr. Bola Obe</p>
+              <p className="font-body text-white/50 text-[12px]">Director</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -103,7 +87,7 @@ export default function AboutPage() {
                 Our A-Level college was born from a clear realization: talented Nigerian students should not have to leave the country at 16 to receive world-class pre-university preparation. We built Platform College so they don&apos;t have to.
               </p>
               <p>
-                Today, we operate three dedicated sixth-form campuses. Our faculty comprises Cambridge-certified examiners and subject experts who don&apos;t just teach the syllabus — they teach students how to think critically, analyze deeply, and perform consistently under examination pressure.
+                Our faculty comprises Cambridge-certified examiners and subject experts who don&apos;t just teach the syllabus — they teach students how to think critically, analyze deeply, and perform consistently under examination pressure.
               </p>
             </div>
           </motion.div>
@@ -121,48 +105,14 @@ export default function AboutPage() {
               <p className="font-body font-bold text-[11px] text-smoke uppercase tracking-widest mt-2">Years in Education</p>
             </motion.div>
             <motion.div {...fade(0.13)} className="border border-hairline p-8 bento-hover">
-              <span className="font-display text-[56px] text-navy leading-none">3</span>
-              <p className="font-body font-bold text-[11px] text-smoke uppercase tracking-widest mt-2">Lagos Campuses</p>
+              <span className="font-display text-[56px] text-navy leading-none">100%</span>
+              <p className="font-body font-bold text-[11px] text-smoke uppercase tracking-widest mt-2">Pass Rate</p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* ── Director's Voice — Video ── */}
-      <section className="bg-navy border-y border-navy py-0 overflow-hidden">
-        <div className="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2">
-          {/* Video */}
-          <div className="relative min-h-[420px] bg-black overflow-hidden">
-            <iframe
-              src="https://drive.google.com/file/d/1pHUF5qjuJ7zqHA5cSS9LHmNXt4gdY3Ke/preview"
-              className="absolute inset-0 w-full h-full"
-              allow="autoplay"
-              allowFullScreen
-              title="Director's Message"
-            />
-          </div>
-          {/* Text */}
-          <div className="px-10 lg:px-16 py-16 flex flex-col justify-center">
-            <span className="font-body font-semibold text-[11px] text-crimson uppercase tracking-[0.16em] mb-4">Director&apos;s Voice</span>
-            <Quote className="w-8 h-8 text-white/20 mb-6" />
-            <h2 className="font-display text-[clamp(28px,3vw,42px)] text-white leading-tight mb-6">
-              A Message from Our Director
-            </h2>
-            <p className="font-body font-light text-[15px] text-white/70 leading-relaxed mb-8">
-              Hear directly from Dr. Bola Obe, Director of Platform Schools, on what drives the institution&apos;s relentless pursuit of excellence and what it truly means to be a Platform student.
-            </p>
-            <div className="flex items-center gap-4 pt-6 border-t border-white/10">
-              <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-crimson shrink-0">
-                <Image src="/team/dr-dola-obe.jpg" alt="Dr. Bola Obe" fill className="object-cover object-top" />
-              </div>
-              <div>
-                <p className="font-body font-bold text-white text-[14px]">Dr. Bola Obe</p>
-                <p className="font-body text-white/50 text-[12px]">Director, Platform Schools</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* ── Pillars ── */}
       <section className="bg-off-white border-y border-hairline py-24 px-6 lg:px-10">
