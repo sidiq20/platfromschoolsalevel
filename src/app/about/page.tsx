@@ -33,9 +33,15 @@ const pillars = [
 const team = [
   {
     name: "Dr. Bola Obe",
-    role: "Director of Platform Schools",
+    role: "Director of Platform College",
     note: "Visionary leader architecting Platform's legacy of excellence and holistic education.",
     img: "/team/dr-dola-obe.jpg",
+  },
+  {
+    name: "Mrs. Bola Obe",
+    role: "Co-Director, Platform College",
+    note: "Dedicated to nurturing academic excellence and character formation in every A-Level student.",
+    img: "/team/mrs-obe.jpg",
   },
 ];
 
@@ -66,7 +72,7 @@ export default function AboutPage() {
             </div>
             <div className="text-left">
               <p className="font-body font-bold text-white text-[14px]">Dr. Bola Obe</p>
-              <p className="font-body text-white/50 text-[12px]">Director</p>
+              <p className="font-body text-white/50 text-[12px]">Director of Platform College</p>
             </div>
           </div>
         </div>

@@ -36,7 +36,7 @@ export default function ContactPage() {
                 {[
                   { icon: Phone, label: "Phone", lines: ["+234 905 302 8880", "+234 802 315 2811"] },
                   { icon: Mail,  label: "Email", lines: ["info@platformcollege.org", "admissions@platformcollege.org"] },
-                  { icon: MapPin,label: "Address", lines: ["12/14 Platform Way, Baruwa,", "Ipaja, Lagos, Nigeria"] },
+                  { icon: MapPin,label: "Address", lines: ["16, James Fadipe, off Aina Obembe Street,", "Oluwaga, Ipaja, Lagos, Nigeria"] },
                 ].map((item, i) => (
                   <motion.div key={i} {...fade(i * 0.07)} className="flex gap-5 items-start">
                     <div className="w-10 h-10 border border-hairline flex items-center justify-center shrink-0">

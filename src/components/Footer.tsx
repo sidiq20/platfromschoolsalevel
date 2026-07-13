@@ -100,7 +100,7 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-white/55">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-white/30" />
-                <span className="font-body text-[13px]">12/14 Platform Way, Baruwa,<br />Ipaja, Lagos, Nigeria</span>
+                <span className="font-body text-[13px]">16, James Fadipe, off Aina Obembe Street,<br />Oluwaga, Ipaja, Lagos, Nigeria</span>
               </li>
               <li className="flex items-center gap-3 text-white/55">
                 <Phone className="w-4 h-4 shrink-0 text-white/30" />

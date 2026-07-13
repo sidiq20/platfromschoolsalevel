@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ExternalLink, GraduationCap, Trophy, Globe, Users } from "lucide-react";
+import { ArrowRight, ExternalLink, GraduationCap, Globe, Users } from "lucide-react";
 
 const fade = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -15,20 +15,20 @@ const fade = (delay = 0) => ({
 const highlights = [
   {
     icon: GraduationCap,
-    title: "Science Olympiad Winners",
-    body: "Our science teams consistently top national competitions, presenting original research to judging panels from top universities.",
-    tag: "Academic Co-Curricular",
+    title: "Cambridge A-Level Excellence",
+    body: "Our A-Level programme delivers exceptional Cambridge results year after year, with students achieving A* and A grades across all subjects through rigorous instruction and personalized support.",
+    tag: "Academic Excellence",
   },
   {
     icon: Globe,
     title: "Global University Placements",
-    body: "Our students receive university counselling from day one, with alumni at Cambridge, LSE, Toronto, and leading Nigerian institutions.",
+    body: "Our students receive university counselling from day one, with alumni at Cambridge, LSE, Toronto, and leading Nigerian institutions via Direct Entry into 200 Level.",
     tag: "University Pathways",
   },
   {
     icon: Users,
-    title: "A Thriving Community",
-    body: "Platform students build lifelong networks through a culture of collaboration, discipline and ambition.",
+    title: "A Thriving A-Level Community",
+    body: "Platform A-Level students build lifelong networks through a culture of academic collaboration, discipline and ambition, preparing them for success at the world's best universities.",
     tag: "Community & Culture",
   },
 ];

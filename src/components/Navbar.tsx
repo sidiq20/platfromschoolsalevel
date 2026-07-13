@@ -18,8 +18,9 @@ const navLinks = [
     ],
   },
   { label: "Campus Life",  href: "/campus-life" },
-  { label: "About",        href: "/about" },
+  { label: "About Us",     href: "/about" },
   { label: "News",         href: "/news" },
+  { label: "Contact Us",   href: "/contact" },
 ];
 
 export function Navbar() {

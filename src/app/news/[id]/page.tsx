@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Calendar, ArrowRight } from "lucide-react";
+import { ArrowLeft, Calendar, ArrowRight, GraduationCap } from "lucide-react";
 import { newsArticles } from "@/data/news";
 
 export function generateStaticParams() {
@@ -42,6 +42,15 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ id
               <Calendar className="w-4 h-4" /> {article.date}
             </span>
           </div>
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-14 h-14 bg-crimson/10 flex items-center justify-center shrink-0">
+              <GraduationCap className="w-7 h-7 text-crimson" />
+            </div>
+            <div>
+              <p className="font-body text-[11px] font-semibold text-crimson uppercase tracking-wider">Platform College</p>
+              <p className="font-body text-[13px] text-iron">Cambridge A-Level College, Lagos</p>
+            </div>
+          </div>
           <h1 className="font-display text-[clamp(32px,4.5vw,60px)] text-navy max-w-4xl leading-tight">
             {article.title}
           </h1>
@@ -54,14 +63,8 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ id
       {/* Article Body + Sidebar */}
       <section className="max-w-[1280px] mx-auto px-6 lg:px-10 py-20 grid grid-cols-1 lg:grid-cols-3 gap-16">
 
-        {/* Body */}
+        {/* Body - No Image */}
         <div className="lg:col-span-2">
-          {/* Article Image Placeholder */}
-          <div className="w-full h-72 bg-stone border border-hairline flex items-center justify-center mb-12">
-            <span className="font-body text-[13px] text-mist uppercase tracking-widest">Article Image</span>
-          </div>
-
-          {/* Prose */}
           <div className="prose prose-lg max-w-none">
             {article.content.split("\n\n").filter(p => p.trim()).map((para, i) => (
               <p
@@ -79,7 +82,7 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ id
           <div className="bg-navy p-8 flex flex-col gap-5">
             <h3 className="font-display text-[22px] text-white">Start Your Journey</h3>
             <p className="font-body text-[14px] text-white/60 leading-relaxed">
-              Inspired by our results? Explore our programmes and apply today.
+              Inspired by our results? Explore our Cambridge A-Level programmes and apply today.
             </p>
             <Link
               href="/programmes"
@@ -91,7 +94,7 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ id
 
           <div className="bg-off-white border border-hairline p-8">
             <h4 className="font-body font-bold text-[14px] text-navy uppercase tracking-widest mb-4">Contact Admissions</h4>
-            <p className="font-body text-[13px] text-iron mb-4">Have questions? Our team is available on WhatsApp.</p>
+            <p className="font-body text-[13px] text-iron mb-4">Have questions about our A-Level programmes? Our team is available on WhatsApp.</p>
             <a
               href="https://wa.me/2349053028880"
               target="_blank"
@@ -108,7 +111,7 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ id
       {related.length > 0 && (
         <section className="bg-off-white border-t border-hairline px-6 lg:px-10 py-20">
           <div className="max-w-[1280px] mx-auto">
-            <h2 className="font-display text-[clamp(24px,2.5vw,36px)] text-navy mb-10">More from Platform</h2>
+            <h2 className="font-display text-[clamp(24px,2.5vw,36px)] text-navy mb-10">More from Platform College</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {related.map((rel) => (
                 <Link
