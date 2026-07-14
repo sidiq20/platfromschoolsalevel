@@ -128,7 +128,7 @@ export function Footer() {
       {/* Education Partner Logos */}
       <div className="bg-white border-y border-hairline py-8">
         <div className="max-w-[1280px] mx-auto px-6 lg:px-10 flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0">
-          <Image src="/cambridge-international-examinations-cambridge-international-centre-vector-logo.png" alt="Cambridge" width={200} height={60} className="object-contain h-12 w-auto" />
+          <Image src="/cambridge-international-examinations-cambridge-international-centre-vector-logo.png" alt="Cambridge" width={300} height={90} className="object-contain h-20 w-auto" />
           <Image src="/bc.png" alt="British Council" width={140} height={40} className="object-contain h-8 w-auto" />
           <Image src="/ielts.png" alt="IELTS" width={100} height={40} className="object-contain h-8 w-auto" />
           <Image src="/ucas.png" alt="UCAS" width={100} height={40} className="object-contain h-8 w-auto" />
