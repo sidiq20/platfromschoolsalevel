@@ -89,7 +89,7 @@ export default async function ProgrammePage({ params }: { params: Promise<{ id: 
               Apply Now <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="https://wa.me/2349053028880"
+              href="https://wa.me/2348064918422"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-body font-bold px-6 py-3 rounded-full hover:bg-[#20bd5a] transition-all"

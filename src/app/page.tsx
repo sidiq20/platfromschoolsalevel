@@ -56,7 +56,7 @@ export default function Home() {
     { q: "What are the entry requirements?", a: "Applicants need a minimum of 5 credits in WAEC, NECO, or IGCSE including Mathematics and English Language. Specific subject requirements apply per programme track." },
     { q: "When are admissions open?", a: "Admissions for the 2026/2027 academic year are currently open. Entrance assessments are ongoing — apply early as places are limited." },
     { q: "Which universities have your students been admitted to?", a: "Our alumni hold offers from universities including University of Cambridge, Imperial College London, LSE, University of Toronto, MIT, and top Nigerian institutions." },
-    { q: "How do I register for the entrance exam?", a: "You can register via our online admissions portal. WhatsApp us at +234 905 302 8880 for a guided walkthrough." },
+    { q: "How do I register for the entrance exam?", a: "You can register via our online admissions portal. WhatsApp us at +234 806 491 8422, +234 905 302 8880 for a guided walkthrough." },
     { q: "Does Platform College offer boarding?", a: "We currently operate as a day school. For full details on facilities and schedules, visit the main Platform Schools website." },
   ];
 
@@ -534,7 +534,7 @@ export default function Home() {
               <div className="px-5 py-4 border-t border-hairline shrink-0 bg-off-white">
                 <p className="font-body text-[12px] text-smoke mb-3">Still have questions? Chat with us directly.</p>
                 <a
-                  href="https://wa.me/2349053028880"
+                  href="https://wa.me/2348064918422"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full h-10 bg-[#25D366] text-white font-body font-semibold text-[13px] hover:bg-[#20ba59] transition-colors"

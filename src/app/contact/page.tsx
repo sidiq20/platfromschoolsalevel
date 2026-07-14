@@ -34,7 +34,7 @@ export default function ContactPage() {
               <h2 className="font-display text-[clamp(24px,3vw,36px)] text-navy mb-10">Contact Details</h2>
               <div className="flex flex-col gap-8">
                 {[
-                  { icon: Phone, label: "Phone", lines: ["+234 905 302 8880", "+234 802 315 2811"] },
+                  { icon: Phone, label: "Phone", lines: ["+234 806 491 8422", "+234 905 302 8880"] },
                   { icon: Mail,  label: "Email", lines: ["info@platformcollege.org", "admissions@platformcollege.org"] },
                   { icon: MapPin,label: "Address", lines: ["16, James Fadipe, off Aina Obembe Street,", "Oluwaga, Ipaja, Lagos, Nigeria"] },
                 ].map((item, i) => (

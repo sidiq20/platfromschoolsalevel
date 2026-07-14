@@ -96,7 +96,7 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ id
             <h4 className="font-body font-bold text-[14px] text-navy uppercase tracking-widest mb-4">Contact Admissions</h4>
             <p className="font-body text-[13px] text-iron mb-4">Have questions about our A-Level programmes? Our team is available on WhatsApp.</p>
             <a
-              href="https://wa.me/2349053028880"
+              href="https://wa.me/2348064918422"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 bg-[#25D366] text-white font-body font-bold px-5 py-2.5 rounded-full hover:bg-[#20bd5a] transition-all text-[13px]"
