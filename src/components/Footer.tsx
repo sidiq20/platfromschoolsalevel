@@ -108,7 +108,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 text-white/55">
                 <Mail className="w-4 h-4 shrink-0 text-white/30" />
-                <span className="font-body text-[13px]">admission@platformcollege.org</span>
+                <span className="font-body text-[13px]">info@platformschools.org</span>
               </li>
               <li className="pt-4">
                 <a

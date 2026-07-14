@@ -24,6 +24,19 @@ const steps = [
 
 export default function AdmissionsPage() {
   const [activeStep, setActiveStep] = useState(1);
+  const [formData, setFormData] = useState({
+    studentName: "",
+    parentName: "",
+    phone: "",
+    programme: "Cambridge A-Level",
+    interests: "",
+  });
+
+  const handleWhatsAppSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const text = `New Application Enquiry%0AStudent: ${formData.studentName}%0AParent: ${formData.parentName}%0APhone: ${formData.phone}%0AProgramme: ${formData.programme}%0AInterests: ${formData.interests}`;
+    window.open(`https://wa.me/2348064918422?text=${text}`, "_blank");
+  };
 
   return (
     <div className="pt-[68px] bg-white min-h-screen">
@@ -85,14 +98,17 @@ export default function AdmissionsPage() {
               <h3 className="font-body font-bold text-[20px] text-navy mb-8 pb-6 border-b border-hairline">
                 Begin Your Application
               </h3>
-              <form className="flex flex-col gap-5" onSubmit={(e) => e.preventDefault()}>
+              <form className="flex flex-col gap-5" onSubmit={handleWhatsAppSubmit}>
                 <div className="flex flex-col gap-1.5">
                   <label className="font-body font-semibold text-[12px] text-navy uppercase tracking-wider">
                     Student&apos;s Full Name <span className="text-crimson">*</span>
                   </label>
                   <input
                     type="text"
+                    required
                     placeholder="Enter full name"
+                    value={formData.studentName}
+                    onChange={(e) => setFormData({...formData, studentName: e.target.value})}
                     className="w-full h-[46px] px-4 border border-hairline font-body text-[14px] text-charcoal focus:outline-none focus:border-navy transition-colors"
                   />
                 </div>
@@ -104,7 +120,10 @@ export default function AdmissionsPage() {
                     </label>
                     <input
                       type="text"
+                      required
                       placeholder="Parent / guardian"
+                      value={formData.parentName}
+                      onChange={(e) => setFormData({...formData, parentName: e.target.value})}
                       className="w-full h-[46px] px-4 border border-hairline font-body text-[14px] text-charcoal focus:outline-none focus:border-navy transition-colors"
                     />
                   </div>
@@ -114,7 +133,10 @@ export default function AdmissionsPage() {
                     </label>
                     <input
                       type="tel"
+                      required
                       placeholder="+234..."
+                      value={formData.phone}
+                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
                       className="w-full h-[46px] px-4 border border-hairline font-body text-[14px] text-charcoal focus:outline-none focus:border-navy transition-colors"
                     />
                   </div>
@@ -124,7 +146,11 @@ export default function AdmissionsPage() {
                   <label className="font-body font-semibold text-[12px] text-navy uppercase tracking-wider">
                     Programme <span className="text-crimson">*</span>
                   </label>
-                  <select className="w-full h-[46px] px-4 border border-hairline font-body text-[14px] text-charcoal focus:outline-none focus:border-navy transition-colors bg-white appearance-none">
+                  <select
+                    value={formData.programme}
+                    onChange={(e) => setFormData({...formData, programme: e.target.value})}
+                    className="w-full h-[46px] px-4 border border-hairline font-body text-[14px] text-charcoal focus:outline-none focus:border-navy transition-colors bg-white appearance-none"
+                  >
                     <option>Cambridge A-Level</option>
                     <option>Cambridge AS-Level</option>
                     <option>Cambridge IGCSE</option>
@@ -138,17 +164,19 @@ export default function AdmissionsPage() {
                   <textarea
                     rows={3}
                     placeholder="e.g. Mathematics, Physics, Chemistry..."
+                    value={formData.interests}
+                    onChange={(e) => setFormData({...formData, interests: e.target.value})}
                     className="w-full p-4 border border-hairline font-body text-[14px] text-charcoal focus:outline-none focus:border-navy transition-colors resize-none"
                   />
                 </div>
 
-                <Button size="lg" variant="primary" className="w-full mt-2">
+                <Button type="submit" size="lg" variant="primary" className="w-full mt-2">
                   Submit Application
                 </Button>
 
                 <p className="text-center font-body text-[12px] text-smoke">
                   Prefer WhatsApp?{" "}
-                  <a href="https://wa.me/2348064918422" className="text-[#25D366] font-semibold">Chat with us →</a>
+                  <a href="https://wa.me/2348064918422" target="_blank" rel="noreferrer" className="text-[#25D366] font-semibold">Chat with us →</a>
                 </p>
               </form>
             </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
@@ -12,6 +13,20 @@ const fade = (delay = 0) => ({
 });
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "General Enquiry",
+    message: "",
+  });
+
+  const handleWhatsAppSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const text = `New Enquiry from ${formData.firstName} ${formData.lastName}.%0AEmail: ${formData.email}%0ASubject: ${formData.subject}%0AMessage: ${formData.message}`;
+    window.open(`https://wa.me/2348064918422?text=${text}`, "_blank");
+  };
+
   return (
     <div className="pt-[68px] bg-white min-h-screen">
       {/* Hero */}
@@ -35,7 +50,7 @@ export default function ContactPage() {
               <div className="flex flex-col gap-8">
                 {[
                   { icon: Phone, label: "Phone", lines: ["+234 806 491 8422", "+234 905 302 8880"] },
-                  { icon: Mail,  label: "Email", lines: ["info@platformcollege.org", "admissions@platformcollege.org"] },
+                  { icon: Mail,  label: "Email", lines: ["info@platformschools.org"] },
                   { icon: MapPin,label: "Address", lines: ["16, James Fadipe, off Aina Obembe Street,", "Oluwaga, Ipaja, Lagos, Nigeria"] },
                 ].map((item, i) => (
                   <motion.div key={i} {...fade(i * 0.07)} className="flex gap-5 items-start">
@@ -57,6 +72,7 @@ export default function ContactPage() {
               <p className="font-body text-[13px] text-smoke mb-5">Prefer a quick conversation?</p>
               <a
                 href="https://wa.me/2348064918422"
+                target="_blank" rel="noreferrer"
                 className="inline-flex items-center gap-3 h-[48px] px-6 bg-[#25D366]/10 text-[#25D366] font-body font-semibold text-[14px] border border-[#25D366]/30 hover:bg-[#25D366]/20 transition-colors"
               >
                 <MessageCircle className="w-5 h-5" />
@@ -68,28 +84,46 @@ export default function ContactPage() {
           {/* Message Form */}
           <div>
             <h2 className="font-display text-[clamp(24px,3vw,36px)] text-navy mb-10">Send a Message</h2>
-            <form className="flex flex-col gap-5" onSubmit={(e) => e.preventDefault()}>
+            <form className="flex flex-col gap-5" onSubmit={handleWhatsAppSubmit}>
               <div className="grid grid-cols-2 gap-4">
-                {[{ l: "First Name", t: "text" }, { l: "Last Name", t: "text" }].map((f) => (
-                  <div key={f.l} className="flex flex-col gap-1.5">
-                    <label className="font-body font-semibold text-[12px] text-navy uppercase tracking-wider">{f.l}</label>
+                <div className="flex flex-col gap-1.5">
+                    <label className="font-body font-semibold text-[12px] text-navy uppercase tracking-wider">First Name</label>
                     <input
-                      type={f.t}
+                      type="text"
+                      required
+                      value={formData.firstName}
+                      onChange={(e) => setFormData({...formData, firstName: e.target.value})}
                       className="w-full h-[46px] px-4 border border-hairline font-body text-[14px] focus:outline-none focus:border-navy transition-colors"
                     />
-                  </div>
-                ))}
+                </div>
+                <div className="flex flex-col gap-1.5">
+                    <label className="font-body font-semibold text-[12px] text-navy uppercase tracking-wider">Last Name</label>
+                    <input
+                      type="text"
+                      required
+                      value={formData.lastName}
+                      onChange={(e) => setFormData({...formData, lastName: e.target.value})}
+                      className="w-full h-[46px] px-4 border border-hairline font-body text-[14px] focus:outline-none focus:border-navy transition-colors"
+                    />
+                </div>
               </div>
               <div className="flex flex-col gap-1.5">
                 <label className="font-body font-semibold text-[12px] text-navy uppercase tracking-wider">Email Address</label>
                 <input
                   type="email"
+                  required
+                  value={formData.email}
+                  onChange={(e) => setFormData({...formData, email: e.target.value})}
                   className="w-full h-[46px] px-4 border border-hairline font-body text-[14px] focus:outline-none focus:border-navy transition-colors"
                 />
               </div>
               <div className="flex flex-col gap-1.5">
                 <label className="font-body font-semibold text-[12px] text-navy uppercase tracking-wider">Subject</label>
-                <select className="w-full h-[46px] px-4 border border-hairline font-body text-[14px] focus:outline-none focus:border-navy transition-colors bg-white appearance-none">
+                <select
+                  value={formData.subject}
+                  onChange={(e) => setFormData({...formData, subject: e.target.value})}
+                  className="w-full h-[46px] px-4 border border-hairline font-body text-[14px] focus:outline-none focus:border-navy transition-colors bg-white appearance-none"
+                >
                   <option>General Enquiry</option>
                   <option>Admissions</option>
                   <option>Fees & Finances</option>
@@ -100,16 +134,18 @@ export default function ContactPage() {
                 <label className="font-body font-semibold text-[12px] text-navy uppercase tracking-wider">Message</label>
                 <textarea
                   rows={5}
+                  required
+                  value={formData.message}
+                  onChange={(e) => setFormData({...formData, message: e.target.value})}
                   className="w-full p-4 border border-hairline font-body text-[14px] focus:outline-none focus:border-navy transition-colors resize-none"
                 />
               </div>
-              <Button size="lg" variant="primary" className="w-full mt-2">Send Message</Button>
+              <Button type="submit" size="lg" variant="primary" className="w-full mt-2">Send Message</Button>
             </form>
           </div>
         </div>
       </section>
-
-
     </div>
   );
 }
+
