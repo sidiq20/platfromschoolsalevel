@@ -55,7 +55,7 @@ export default function AboutPage() {
   return (
     <div className="pt-[68px] bg-white min-h-screen">
 
-      {/* ── Hero — The Story + Director ── */}
+      {/* ── Hero — The Story ── */}
       <section className="grid grid-cols-1 lg:grid-cols-2 min-h-[85vh]">
         {/* Left — About Text */}
         <div className="bg-off-white border-b lg:border-b-0 lg:border-r border-hairline px-6 md:px-12 lg:px-16 py-24 flex flex-col justify-center">
@@ -75,31 +75,21 @@ export default function AboutPage() {
               ))}
             </div>
             <p className="font-body text-[13px] text-smoke">
-              Led by <span className="font-semibold text-navy">Dr. Bola Obe</span>
+              Led by <span className="font-semibold text-navy">Dr. Bola Obe & Mrs. Bola Obe</span>
             </p>
           </div>
         </div>
 
-        {/* Right — Director's Voice */}
-        <div className="relative min-h-[420px] lg:min-h-0 overflow-hidden bg-navy flex flex-col justify-center px-8 md:px-12 lg:px-16 py-16">
-          {/* Decorative Quote Marks */}
-          <div className="flex items-start gap-3 mb-6">
-            <Quote className="w-10 h-10 text-crimson/40 shrink-0 mt-1" />
-            <p className="font-body font-light text-[17px] md:text-[19px] text-white/95 leading-relaxed max-w-lg">
-              &ldquo;At Platform College, we&apos;re not just preparing students for exams — we&apos;re preparing them for life. Our Cambridge A-Level programme challenges, inspires, and transforms.&rdquo;
-            </p>
-          </div>
-
-          {/* Avatar at bottom-left */}
-          <div className="flex items-center gap-5 pt-6 border-t border-white/10 max-w-sm mt-auto">
-            <div className="relative w-20 h-20 rounded-full overflow-hidden border-[3px] border-crimson shrink-0 shadow-xl">
-              <Image src="/team/dr-dola-obe.jpg" alt="Dr. Bola Obe" fill className="object-cover object-top" priority />
-            </div>
-            <div>
-              <p className="font-body font-bold text-white text-[16px]">Dr. Bola Obe</p>
-              <p className="font-body text-white/50 text-[13px]">Director of Platform College</p>
-            </div>
-          </div>
+        {/* Right — Premium Student Cover */}
+        <div className="relative min-h-[420px] lg:min-h-0 overflow-hidden bg-navy">
+          <Image
+            src="/a_level_students_wearing_whites.jpg"
+            alt="Platform College Students"
+            fill
+            className="object-cover object-top"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent" />
         </div>
       </section>
 
@@ -169,11 +159,125 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Programme Manager Message ── */}
+      {/* ── Director Address ── */}
       <section className="py-24 px-6 lg:px-10 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <motion.div {...fade(0)} className="mb-14 text-center">
             <span className="font-body font-semibold text-[11px] text-crimson uppercase tracking-[0.16em]">A Message from Leadership</span>
+            <h2 className="font-display text-[clamp(28px,3vw,44px)] text-navy mt-3">Director&apos;s Address.</h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 lg:gap-10 items-center bg-off-white border border-hairline overflow-hidden">
+            {/* Image Side — 2/5 */}
+            <motion.div
+              {...fade(0.06)}
+              className="lg:col-span-2 relative h-[360px] md:h-[480px] lg:h-full min-h-[400px] overflow-hidden"
+            >
+              <Image
+                src="/team/dr-dola-obe.jpg"
+                alt="Dr. Bola Obe — Director"
+                fill
+                className="object-cover object-top"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/30 via-transparent to-transparent" />
+            </motion.div>
+
+            {/* Message Side — 3/5 */}
+            <motion.div
+              {...fade(0.12)}
+              className="lg:col-span-3 px-8 md:px-12 lg:px-16 py-12"
+            >
+              <Quote className="w-8 h-8 text-crimson/20 mb-6" />
+              <div className="space-y-5 font-body text-[15px] md:text-[16px] text-iron leading-relaxed">
+                <p className="text-lg font-medium text-navy font-semibold">
+                  Welcome to Platform College. As the Director, it is my privilege to lead an institution that stands at the frontier of academic distinction. Our goal has always been simple yet ambitious: to establish a learning environment in Nigeria that rivals the finest sixth-form colleges anywhere in the world.
+                </p>
+                <p>
+                  At Platform, we believe that Cambridge A-Levels are more than just a gateway to top-tier international and domestic universities. They are a rigorous intellectual trial that shapes how a young mind thinks, reasons, and solves complex problems. We do not merely prepare our students to pass examinations; we teach them to engage with knowledge critically, to challenge assumptions, and to love the pursuit of truth.
+                </p>
+                <p>
+                  Our success is built on three foundational pillars: an unyielding commitment to academic excellence, the character to persevere under pressure, and a global mindset that looks beyond borders. When students walk through our doors, they join a culture of high standards where they are encouraged to discover and realize their full potential.
+                </p>
+                <p className="font-semibold text-navy">
+                  I invite you to explore the endless possibilities that a Platform College education offers. Together, we will build a legacy of academic triumph and character that will distinguish our students on any global stage they choose to walk upon.
+                </p>
+              </div>
+              <div className="flex items-center gap-5 mt-8 pt-6 border-t border-hairline">
+                <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-crimson shrink-0 shadow-md">
+                  <Image src="/team/dr-dola-obe.jpg" alt="Dr. Bola Obe" fill className="object-cover object-top" />
+                </div>
+                <div>
+                  <p className="font-body font-bold text-[15px] text-navy">Dr. Bola Obe</p>
+                  <p className="font-body text-[12px] text-smoke">Director, Platform College</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Co-Director Address ── */}
+      <section className="py-24 px-6 lg:px-10 bg-off-white border-y border-hairline">
+        <div className="max-w-[1280px] mx-auto">
+          <motion.div {...fade(0)} className="mb-14 text-center">
+            <span className="font-body font-semibold text-[11px] text-crimson uppercase tracking-[0.16em]">Nurturing Character & Excellence</span>
+            <h2 className="font-display text-[clamp(28px,3vw,44px)] text-navy mt-3">Co-Director&apos;s Address.</h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 lg:gap-10 items-center bg-white border border-hairline overflow-hidden">
+            {/* Image Side — 2/5 (Right on desktop, top on mobile) */}
+            <motion.div
+              {...fade(0.06)}
+              className="lg:col-span-2 lg:order-last relative h-[360px] md:h-[480px] lg:h-full min-h-[400px] overflow-hidden"
+            >
+              <Image
+                src="/team/mrs-obe.jpg"
+                alt="Mrs. Bola Obe — Co-Director"
+                fill
+                className="object-cover object-top"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/30 via-transparent to-transparent" />
+            </motion.div>
+
+            {/* Message Side — 3/5 (Left on desktop) */}
+            <motion.div
+              {...fade(0.12)}
+              className="lg:col-span-3 lg:order-first px-8 md:px-12 lg:px-16 py-12"
+            >
+              <Quote className="w-8 h-8 text-crimson/20 mb-6" />
+              <div className="space-y-5 font-body text-[15px] md:text-[16px] text-iron leading-relaxed">
+                <p className="text-lg font-medium text-navy font-semibold">
+                  At Platform College, we understand that true education is a holistic journey. While academic rigour is our cornerstone, we believe that academic brilliance without character and discipline is incomplete. As Co-Director, my mission is to ensure that every student who joins our community is nurtured to become a well-rounded leader of tomorrow.
+                </p>
+                <p>
+                  We provide a supportive, disciplined, and enriching environment where students can transition from secondary school to the independence of university life. Our focus is on building character, resilience, and emotional intelligence. We teach our students that excellence is not an occasional achievement, but a continuous habit of discipline, respect, and hard work.
+                </p>
+                <p>
+                  Every young person who enters Platform College is recognized as an individual with unique talents and ambitions. Through personalized mentorship, character-building programs, and collaborative activities, we empower our students to find their voice, develop leadership skills, and cultivate a deep sense of social responsibility.
+                </p>
+                <p className="font-semibold text-navy">
+                  We remain committed to partnering with parents and educators to provide the guidance, support, and care necessary for our students to thrive and make lasting impacts on the world.
+                </p>
+              </div>
+              <div className="flex items-center gap-5 mt-8 pt-6 border-t border-hairline">
+                <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-crimson shrink-0 shadow-md">
+                  <Image src="/team/mrs-obe.jpg" alt="Mrs. Bola Obe" fill className="object-cover object-top" />
+                </div>
+                <div>
+                  <p className="font-body font-bold text-[15px] text-navy">Mrs. Bola Obe</p>
+                  <p className="font-body text-[12px] text-smoke">Co-Director, Platform College</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Programme Manager Address ── */}
+      <section className="py-24 px-6 lg:px-10 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <motion.div {...fade(0)} className="mb-14 text-center">
+            <span className="font-body font-semibold text-[11px] text-crimson uppercase tracking-[0.16em]">Operational Excellence</span>
             <h2 className="font-display text-[clamp(28px,3vw,44px)] text-navy mt-3">Programme Manager&apos;s Address.</h2>
           </motion.div>
 
@@ -199,7 +303,7 @@ export default function AboutPage() {
             >
               <Quote className="w-8 h-8 text-crimson/20 mb-6" />
               <div className="space-y-5 font-body text-[15px] md:text-[16px] text-iron leading-relaxed">
-                <p className="text-lg font-medium text-navy">
+                <p className="text-lg font-medium text-navy font-semibold">
                   Welcome to Platform College (Sixth Form School), where we are committed to preparing students for success at university and beyond through a world-class A-Level education.
                 </p>
                 <p>
