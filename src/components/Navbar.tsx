@@ -8,7 +8,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 
 const navLinks = [
   {
-    label: "Academic",
+    label: "Academics",
     href: "/programmes",
     sub: [
       { label: "AS & A Levels (2 Years)",           href: "/programmes/a-level-2-years" },

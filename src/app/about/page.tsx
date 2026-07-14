@@ -80,34 +80,24 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Right — Director's Voice with Large Image */}
-        <div className="relative min-h-[420px] lg:min-h-0 overflow-hidden bg-navy flex flex-col">
-          {/* Director's Image — takes 55% */}
-          <div className="relative flex-[5] min-h-[280px] overflow-hidden">
-            <Image
-              src="/team/dr-dola-obe.jpg"
-              alt="Dr. Bola Obe — Director of Platform College"
-              fill
-              className="object-cover object-top"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent" />
-          </div>
-
-          {/* Quote Section — takes 45% */}
-          <div className="flex-[4] flex flex-col justify-center px-8 md:px-12 lg:px-14 py-8">
-            <Quote className="w-7 h-7 text-crimson/60 mb-4" />
-            <p className="font-body font-light text-[17px] md:text-[19px] text-white/95 leading-relaxed mb-6 max-w-lg">
+        {/* Right — Director's Voice */}
+        <div className="relative min-h-[420px] lg:min-h-0 overflow-hidden bg-navy flex flex-col justify-center px-8 md:px-12 lg:px-16 py-16">
+          {/* Decorative Quote Marks */}
+          <div className="flex items-start gap-3 mb-6">
+            <Quote className="w-10 h-10 text-crimson/40 shrink-0 mt-1" />
+            <p className="font-body font-light text-[17px] md:text-[19px] text-white/95 leading-relaxed max-w-lg">
               &ldquo;At Platform College, we&apos;re not just preparing students for exams — we&apos;re preparing them for life. Our Cambridge A-Level programme challenges, inspires, and transforms.&rdquo;
             </p>
-            <div className="flex items-center gap-4 pt-5 border-t border-white/10 max-w-sm">
-              <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-crimson shrink-0 shadow-lg">
-                <Image src="/team/dr-dola-obe.jpg" alt="Dr. Bola Obe" fill className="object-cover object-top" />
-              </div>
-              <div>
-                <p className="font-body font-bold text-white text-[15px]">Dr. Bola Obe</p>
-                <p className="font-body text-white/50 text-[12px]">Director of Platform College</p>
-              </div>
+          </div>
+
+          {/* Avatar at bottom-left */}
+          <div className="flex items-center gap-5 pt-6 border-t border-white/10 max-w-sm mt-auto">
+            <div className="relative w-20 h-20 rounded-full overflow-hidden border-[3px] border-crimson shrink-0 shadow-xl">
+              <Image src="/team/dr-dola-obe.jpg" alt="Dr. Bola Obe" fill className="object-cover object-top" priority />
+            </div>
+            <div>
+              <p className="font-body font-bold text-white text-[16px]">Dr. Bola Obe</p>
+              <p className="font-body text-white/50 text-[13px]">Director of Platform College</p>
             </div>
           </div>
         </div>
