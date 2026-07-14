@@ -44,7 +44,7 @@ export function Navbar() {
         <div className="max-w-[1280px] mx-auto px-6 lg:px-10 h-[68px] flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <Image src="/platformalevellogo.png" alt="Platform College Logo" width={160} height={40} className="w-auto h-10 object-contain" />
+            <Image src="/newlogo.png" alt="Platform College Logo" width={160} height={40} className="w-auto h-10 object-contain" />
           </Link>
 
           {/* Desktop Nav */}

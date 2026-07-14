@@ -25,6 +25,10 @@ export const metadata: Metadata = {
   authors: [{ name: "Platform College" }],
   creator: "Platform College",
   publisher: "Platform Schools Group",
+  icons: {
+    icon: "/newlogo.png",
+    apple: "/newlogo.png",
+  },
   robots: {
     index: true,
     follow: true,

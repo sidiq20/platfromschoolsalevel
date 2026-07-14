@@ -48,7 +48,7 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-4 mb-6">
-              <Image src="/platformalevellogo.png" alt="Platform College Logo" width={180} height={48} className="w-auto h-12 object-contain" />
+              <Image src="/newlogo.png" alt="Platform College Logo" width={180} height={48} className="w-auto h-12 object-contain" />
             </Link>
             <p className="font-display italic text-[17px] text-white/50 leading-relaxed mb-8">
               Cambridge AS & A Level education in Lagos, Nigeria.
