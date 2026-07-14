@@ -38,7 +38,7 @@ const team = [
     img: "/team/dr-dola-obe.jpg",
   },
   {
-    name: "Mrs. Bola Obe",
+    name: "Mrs. Yemi Obe",
     role: "Co-Director, Platform College",
     note: "Dedicated to nurturing academic excellence and character formation in every A-Level student.",
     img: "/team/mrs-obe.jpg",
@@ -75,7 +75,7 @@ export default function AboutPage() {
               ))}
             </div>
             <p className="font-body text-[13px] text-smoke">
-              Led by <span className="font-semibold text-navy">Dr. Bola Obe & Mrs. Bola Obe</span>
+              Led by <span className="font-semibold text-navy">Dr. Bola Obe & Mrs. Yemi Obe</span>
             </p>
           </div>
         </div>
@@ -232,7 +232,7 @@ export default function AboutPage() {
             >
               <Image
                 src="/team/mrs-obe.jpg"
-                alt="Mrs. Bola Obe — Co-Director"
+                alt="Mrs. Yemi Obe — Co-Director"
                 fill
                 className="object-cover object-top"
               />
@@ -261,10 +261,10 @@ export default function AboutPage() {
               </div>
               <div className="flex items-center gap-5 mt-8 pt-6 border-t border-hairline">
                 <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-crimson shrink-0 shadow-md">
-                  <Image src="/team/mrs-obe.jpg" alt="Mrs. Bola Obe" fill className="object-cover object-top" />
+                  <Image src="/team/mrs-obe.jpg" alt="Mrs. Yemi Obe" fill className="object-cover object-top" />
                 </div>
                 <div>
-                  <p className="font-body font-bold text-[15px] text-navy">Mrs. Bola Obe</p>
+                  <p className="font-body font-bold text-[15px] text-navy">Mrs. Yemi Obe</p>
                   <p className="font-body text-[12px] text-smoke">Co-Director, Platform College</p>
                 </div>
               </div>
