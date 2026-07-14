@@ -19,7 +19,6 @@ const navLinks = [
   },
   { label: "Campus Life",  href: "/campus-life" },
   { label: "About Us",     href: "/about" },
-  { label: "News",         href: "/news" },
   { label: "Contact Us",   href: "/contact" },
 ];
 

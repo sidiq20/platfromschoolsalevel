@@ -27,7 +27,6 @@ const footerLinks = {
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Campus Life", href: "/campus-life" },
-    { label: "News", href: "/news" },
     { label: "Contact", href: "/contact" },
   ],
   Programmes: [

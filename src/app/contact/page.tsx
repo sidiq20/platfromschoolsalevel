@@ -50,7 +50,7 @@ export default function ContactPage() {
               <div className="flex flex-col gap-8">
                 {[
                   { icon: Phone, label: "Phone", lines: ["+234 806 491 8422", "+234 905 302 8880"] },
-                  { icon: Mail,  label: "Email", lines: ["info@platformschools.org"] },
+                  { icon: Mail,  label: "Email", lines: ["info@platformschools.org", "admissions@platformcollege.org"] },
                   { icon: MapPin,label: "Address", lines: ["16, James Fadipe, off Aina Obembe Street,", "Oluwaga, Ipaja, Lagos, Nigeria"] },
                 ].map((item, i) => (
                   <motion.div key={i} {...fade(i * 0.07)} className="flex gap-5 items-start">

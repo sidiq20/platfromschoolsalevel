@@ -91,12 +91,12 @@ export default function Home() {
                 <X className="w-5 h-5" />
               </button>
               
-              <Image 
-                src="/advert.png" 
-                alt="Platform College Advert" 
-                width={800} 
-                height={800} 
-                className="w-full max-h-[45vh] object-contain rounded-xl mb-6 shadow-sm border border-hairline" 
+              <Image
+                src="/new flyer.jpeg"
+                alt="Platform College Advert"
+                width={800}
+                height={800}
+                className="w-full max-h-[45vh] object-contain rounded-xl mb-6 shadow-sm border border-hairline"
               />
               <h2 className="font-display text-[28px] text-navy mb-3 leading-tight">Our UK Summer Camp Is Now Open</h2>
               <p className="font-body text-iron mb-6 leading-relaxed">
@@ -224,7 +224,7 @@ export default function Home() {
       ══════════════════════════════════════════ */}
       <section className="max-w-[1000px] mx-auto px-6 py-16">
         <motion.div {...fadeUp(0)} className="rounded-[32px] overflow-hidden shadow-[0_20px_50px_rgba(11,34,64,0.15)] border-[8px] border-white/50 backdrop-blur-lg">
-          <Image src="/advert.png" alt="Platform College Admissions" width={1000} height={1000} className="w-full h-auto object-cover" />
+          <Image src="/new flyer.jpeg" alt="Platform College Admissions" width={1000} height={1000} className="w-full h-auto object-cover" />
         </motion.div>
       </section>
 
@@ -257,10 +257,9 @@ export default function Home() {
       <section className="max-w-[1280px] mx-auto px-6 lg:px-10 py-24">
         <div className="grid grid-cols-2 md:grid-cols-4 border border-hairline divide-x divide-y divide-hairline">
           {[
-            { num: "15+", label: "Years of Excellence", icon: Award },
+            { num: "17+", label: "Years of Excellence", icon: Award },
             { num: "50+", label: "Expert Tutors", icon: Building2 },
             { num: "100%",label: "Cambridge Pass Rate", icon: Trophy },
-            { num: "500+",label: "Alumni Worldwide",    icon: Globe },
           ].map((stat, i) => (
             <motion.div
               key={i}

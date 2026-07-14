@@ -122,7 +122,7 @@ export default function AboutPage() {
               <p className="font-body text-white/50 text-[12px] mt-4">— Platform Schools Group Founder</p>
             </motion.div>
             <motion.div {...fade(0.1)} className="border border-hairline p-8 bento-hover">
-              <span className="font-display text-[56px] text-navy leading-none">15+</span>
+              <span className="font-display text-[56px] text-navy leading-none">17+</span>
               <p className="font-body font-bold text-[11px] text-smoke uppercase tracking-widest mt-2">Years in Education</p>
             </motion.div>
             <motion.div {...fade(0.13)} className="border border-hairline p-8 bento-hover">
