@@ -44,7 +44,7 @@ const team = [
     img: "/team/mrs-obe.jpg",
   },
   {
-    name: "Miss Adetutu Esther",
+    name: "Miss Esther Adetutu",
     role: "Programme Manager",
     note: "Committed to guiding students through their A-Level journey with personalized academic support.",
     img: "/team/programme-manager.jpg",
@@ -289,7 +289,7 @@ export default function AboutPage() {
             >
               <Image
                 src="/team/programme-manager.jpg"
-                alt="Miss Adetutu Esther — Programme Manager"
+                alt="Miss Esther Adetutu — Programme Manager"
                 fill
                 className="object-cover object-top"
               />
@@ -318,10 +318,10 @@ export default function AboutPage() {
               </div>
               <div className="flex items-center gap-5 mt-8 pt-6 border-t border-hairline">
                 <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-crimson shrink-0 shadow-md">
-                  <Image src="/team/programme-manager.jpg" alt="Miss Adetutu Esther" fill className="object-cover object-top" />
+                  <Image src="/team/programme-manager.jpg" alt="Miss Esther Adetutu" fill className="object-cover object-top" />
                 </div>
                 <div>
-                  <p className="font-body font-bold text-[15px] text-navy">Miss Adetutu Esther</p>
+                  <p className="font-body font-bold text-[15px] text-navy">Miss Esther Adetutu</p>
                   <p className="font-body text-[12px] text-smoke">Programme Manager, Platform College</p>
                 </div>
               </div>
