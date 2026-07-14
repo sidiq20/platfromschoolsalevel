@@ -56,7 +56,7 @@ export default function ContactPage() {
             <div className="border-t border-hairline pt-10">
               <p className="font-body text-[13px] text-smoke mb-5">Prefer a quick conversation?</p>
               <a
-                href="#"
+                href="https://wa.me/2348064918422"
                 className="inline-flex items-center gap-3 h-[48px] px-6 bg-[#25D366]/10 text-[#25D366] font-body font-semibold text-[14px] border border-[#25D366]/30 hover:bg-[#25D366]/20 transition-colors"
               >
                 <MessageCircle className="w-5 h-5" />

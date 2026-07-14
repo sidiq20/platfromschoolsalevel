@@ -148,7 +148,7 @@ export default function AdmissionsPage() {
 
                 <p className="text-center font-body text-[12px] text-smoke">
                   Prefer WhatsApp?{" "}
-                  <a href="#" className="text-[#25D366] font-semibold">Chat with us →</a>
+                  <a href="https://wa.me/2348064918422" className="text-[#25D366] font-semibold">Chat with us →</a>
                 </p>
               </form>
             </div>

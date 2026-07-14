@@ -104,7 +104,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 text-white/55">
                 <Phone className="w-4 h-4 shrink-0 text-white/30" />
-                <span className="font-body text-[13px]">+234 806 491 8422 / +234 905 302 8880</span>
+                <span className="font-body text-[13px]">+234 806 491 8422</span>
               </li>
               <li className="flex items-center gap-3 text-white/55">
                 <Mail className="w-4 h-4 shrink-0 text-white/30" />
@@ -112,7 +112,7 @@ export function Footer() {
               </li>
               <li className="pt-4">
                 <a
-                  href="https://wa.me/2349053028880"
+                  href="https://wa.me/2348064918422"
                   target="_blank" rel="noreferrer"
                   className="inline-flex items-center gap-2 font-body font-bold text-[14px] text-white bg-[#25D366] px-5 py-2.5 rounded-full hover:bg-[#20bd5a] transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                 >
