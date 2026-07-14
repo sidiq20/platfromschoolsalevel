@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Target, GraduationCap, Globe2, Play, Quote } from "lucide-react";
+import { ArrowRight, Target, GraduationCap, Globe2, Quote } from "lucide-react";
 
 const fade = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -43,36 +43,71 @@ const team = [
     note: "Dedicated to nurturing academic excellence and character formation in every A-Level student.",
     img: "/team/mrs-obe.jpg",
   },
+  {
+    name: "Miss Adetutu Esther",
+    role: "Programme Manager",
+    note: "Committed to guiding students through their A-Level journey with personalized academic support.",
+    img: "/team/programme-manager.jpg",
+  },
 ];
 
 export default function AboutPage() {
   return (
     <div className="pt-[68px] bg-white min-h-screen">
 
-      {/* ── Hero — Video Intro ── */}
-      <section className="grid grid-cols-1 lg:grid-cols-2 min-h-[70vh]">
+      {/* ── Hero — The Story + Director ── */}
+      <section className="grid grid-cols-1 lg:grid-cols-2 min-h-[85vh]">
+        {/* Left — About Text */}
         <div className="bg-off-white border-b lg:border-b-0 lg:border-r border-hairline px-6 md:px-12 lg:px-16 py-24 flex flex-col justify-center">
           <span className="font-body font-semibold text-[11px] text-crimson uppercase tracking-[0.16em]">About Platform College</span>
-          <h1 className="font-display text-[clamp(40px,5vw,72px)] text-navy mt-3 mb-6">The Platform Story.</h1>
+          <h1 className="font-display text-[clamp(40px,5vw,72px)] text-navy mt-3 mb-6 leading-[1.02]">
+            The Platform Story.
+          </h1>
           <p className="font-body font-light text-[18px] text-iron leading-relaxed max-w-md">
             Founded with a singular vision: provide Cambridge education in Lagos that rivals the best sixth-form colleges in the United Kingdom.
           </p>
-        </div>
-        {/* Director's Voice */}
-        <div className="relative min-h-[360px] lg:min-h-0 border-b border-hairline overflow-hidden bg-navy flex flex-col items-center justify-center text-center p-10">
-          <Quote className="w-8 h-8 text-white/20 mb-6" />
-          <p className="font-body font-light text-[18px] text-white/90 leading-relaxed mb-8 max-w-md">
-            "At Platform College, we are committed to providing world-class Cambridge education. 
-            Our A-Level program is designed to challenge students, build character, and prepare them 
-            for the best universities globally. We believe in your potential."
-          </p>
-          <div className="flex items-center gap-4 pt-6 border-t border-white/10 w-full max-w-sm justify-center">
-            <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-crimson shrink-0">
-              <Image src="/team/dr-dola-obe.jpg" alt="Dr. Bola Obe" fill className="object-cover object-top" />
+          <div className="mt-10 flex items-center gap-8">
+            <div className="flex -space-x-3">
+              {team.slice(0, 3).map((m, i) => (
+                <div key={i} className="w-10 h-10 rounded-full border-2 border-white overflow-hidden relative shadow-sm">
+                  <Image src={m.img} alt={m.name} fill className="object-cover object-top" />
+                </div>
+              ))}
             </div>
-            <div className="text-left">
-              <p className="font-body font-bold text-white text-[14px]">Dr. Bola Obe</p>
-              <p className="font-body text-white/50 text-[12px]">Director of Platform College</p>
+            <p className="font-body text-[13px] text-smoke">
+              Led by <span className="font-semibold text-navy">Dr. Bola Obe</span>
+            </p>
+          </div>
+        </div>
+
+        {/* Right — Director's Voice with Large Image */}
+        <div className="relative min-h-[420px] lg:min-h-0 overflow-hidden bg-navy flex flex-col">
+          {/* Director's Image — takes 55% */}
+          <div className="relative flex-[5] min-h-[280px] overflow-hidden">
+            <Image
+              src="/team/dr-dola-obe.jpg"
+              alt="Dr. Bola Obe — Director of Platform College"
+              fill
+              className="object-cover object-top"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent" />
+          </div>
+
+          {/* Quote Section — takes 45% */}
+          <div className="flex-[4] flex flex-col justify-center px-8 md:px-12 lg:px-14 py-8">
+            <Quote className="w-7 h-7 text-crimson/60 mb-4" />
+            <p className="font-body font-light text-[17px] md:text-[19px] text-white/95 leading-relaxed mb-6 max-w-lg">
+              &ldquo;At Platform College, we&apos;re not just preparing students for exams — we&apos;re preparing them for life. Our Cambridge A-Level programme challenges, inspires, and transforms.&rdquo;
+            </p>
+            <div className="flex items-center gap-4 pt-5 border-t border-white/10 max-w-sm">
+              <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-crimson shrink-0 shadow-lg">
+                <Image src="/team/dr-dola-obe.jpg" alt="Dr. Bola Obe" fill className="object-cover object-top" />
+              </div>
+              <div>
+                <p className="font-body font-bold text-white text-[15px]">Dr. Bola Obe</p>
+                <p className="font-body text-white/50 text-[12px]">Director of Platform College</p>
+              </div>
             </div>
           </div>
         </div>
@@ -118,8 +153,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-
-
       {/* ── Pillars ── */}
       <section className="bg-off-white border-y border-hairline py-24 px-6 lg:px-10">
         <div className="max-w-[1280px] mx-auto">
@@ -146,22 +179,79 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ── Programme Manager Message ── */}
+      <section className="py-24 px-6 lg:px-10 bg-white">
+        <div className="max-w-[1280px] mx-auto">
+          <motion.div {...fade(0)} className="mb-14 text-center">
+            <span className="font-body font-semibold text-[11px] text-crimson uppercase tracking-[0.16em]">A Message from Leadership</span>
+            <h2 className="font-display text-[clamp(28px,3vw,44px)] text-navy mt-3">Programme Manager&apos;s Address.</h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 lg:gap-10 items-center bg-off-white border border-hairline overflow-hidden">
+            {/* Image Side — 2/5 */}
+            <motion.div
+              {...fade(0.06)}
+              className="lg:col-span-2 relative h-[360px] md:h-[480px] lg:h-full min-h-[400px] overflow-hidden"
+            >
+              <Image
+                src="/team/programme-manager.jpg"
+                alt="Miss Adetutu Esther — Programme Manager"
+                fill
+                className="object-cover object-top"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/30 via-transparent to-transparent" />
+            </motion.div>
+
+            {/* Message Side — 3/5 */}
+            <motion.div
+              {...fade(0.12)}
+              className="lg:col-span-3 px-8 md:px-12 lg:px-16 py-12"
+            >
+              <Quote className="w-8 h-8 text-crimson/20 mb-6" />
+              <div className="space-y-5 font-body text-[15px] md:text-[16px] text-iron leading-relaxed">
+                <p className="text-lg font-medium text-navy">
+                  Welcome to Platform College (Sixth Form School), where we are committed to preparing students for success at university and beyond through a world-class A-Level education.
+                </p>
+                <p>
+                  Our programme is designed to develop academic excellence, critical thinking, leadership, and the confidence needed to thrive in an increasingly competitive global environment. With experienced teachers, personalised academic support, and a culture of excellence, we equip every student with the knowledge and skills required to gain admission into top universities and excel in their chosen careers.
+                </p>
+                <p>
+                  Beyond outstanding examination results, we are passionate about nurturing responsible, innovative, and well-rounded individuals who are ready to make meaningful contributions to society. We also provide dedicated university and career guidance, ensuring that every student is well prepared for the next stage of their academic journey.
+                </p>
+                <p className="font-semibold text-navy">
+                  At Platform College, we believe every student has the potential to achieve greatness. We invite you to join our vibrant learning community and take the next step towards a future filled with opportunities and success.
+                </p>
+              </div>
+              <div className="flex items-center gap-5 mt-8 pt-6 border-t border-hairline">
+                <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-crimson shrink-0 shadow-md">
+                  <Image src="/team/programme-manager.jpg" alt="Miss Adetutu Esther" fill className="object-cover object-top" />
+                </div>
+                <div>
+                  <p className="font-body font-bold text-[15px] text-navy">Miss Adetutu Esther</p>
+                  <p className="font-body text-[12px] text-smoke">Programme Manager, Platform College</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* ── Team ── */}
-      <section className="py-24 px-6 lg:px-10">
+      <section className="py-24 px-6 lg:px-10 bg-off-white border-y border-hairline">
         <div className="max-w-[1280px] mx-auto">
           <motion.div {...fade(0)} className="mb-14">
             <span className="font-body font-semibold text-[11px] text-crimson uppercase tracking-[0.16em]">Our Leadership</span>
             <h2 className="font-display text-[clamp(28px,3vw,44px)] text-navy mt-3">The People Behind the Results.</h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 max-w-4xl mx-auto">
             {team.map((member, i) => (
               <motion.div
                 key={i}
                 {...fade(i * 0.07)}
-                className="border border-hairline group bento-hover"
+                className="border border-hairline group bento-hover bg-white"
               >
-                <div className="aspect-[3/4] relative border-b border-hairline overflow-hidden">
+                <div className="aspect-[3/4] relative border-b border-hairline overflow-hidden bg-stone">
                   <Image
                     src={member.img}
                     alt={member.name}
