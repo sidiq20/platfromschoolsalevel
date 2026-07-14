@@ -258,7 +258,6 @@ export default function Home() {
         <div className="grid grid-cols-2 md:grid-cols-4 border border-hairline divide-x divide-y divide-hairline">
           {[
             { num: "17+", label: "Years of Excellence", icon: Award },
-            { num: "50+", label: "Expert Tutors", icon: Building2 },
             { num: "100%",label: "Cambridge Pass Rate", icon: Trophy },
           ].map((stat, i) => (
             <motion.div
