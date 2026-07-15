@@ -103,11 +103,17 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 text-white/55">
                 <Phone className="w-4 h-4 shrink-0 text-white/30" />
-                <span className="font-body text-[13px]">+234 806 491 8422</span>
+                <div className="flex flex-col gap-0.5">
+                  <span className="font-body text-[13px]">+234 905 302 8880</span>
+                  <span className="font-body text-[13px]">+234 905 301 8880</span>
+                </div>
               </li>
-              <li className="flex items-center gap-3 text-white/55">
-                <Mail className="w-4 h-4 shrink-0 text-white/30" />
-                <span className="font-body text-[13px]">info@platformschools.org</span>
+              <li className="flex items-start gap-3 text-white/55">
+                <Mail className="w-4 h-4 mt-0.5 shrink-0 text-white/30" />
+                <div className="flex flex-col gap-0.5">
+                  <span className="font-body text-[13px]">info@platformschools.org</span>
+                  <span className="font-body text-[13px]">admissions@platformcollege.org</span>
+                </div>
               </li>
               <li className="pt-4">
                 <a

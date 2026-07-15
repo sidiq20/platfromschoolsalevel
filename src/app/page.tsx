@@ -440,7 +440,115 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ══════════════════════════════════════════
+          NEWS — 2026/27 Admissions Announcement
+      ══════════════════════════════════════════ */}
+      <section className="py-24 px-6 bg-off-white border-y border-hairline">
+        <div className="max-w-[1280px] mx-auto">
+          <motion.div {...fadeUp(0)} className="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-4">
+            <div>
+              <span className="font-body font-semibold text-[11px] text-crimson uppercase tracking-[0.16em]">
+                Latest News
+              </span>
+              <h2 className="font-display text-[clamp(28px,3.5vw,44px)] text-navy mt-2">
+                Announcements &amp; Updates
+              </h2>
+            </div>
+            <Link
+              href="/admissions"
+              className="inline-flex items-center gap-2 font-body font-semibold text-[13px] text-royal hover:gap-4 transition-all shrink-0"
+            >
+              Apply now <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
 
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+            {/* Featured News Card — Admissions Open */}
+            <motion.div
+              {...fadeUp(0)}
+              className="lg:col-span-2 bg-navy text-white p-10 flex flex-col justify-between relative overflow-hidden group"
+            >
+              <div className="absolute top-0 right-0 w-[280px] h-[280px] bg-crimson/10 rounded-full blur-[80px] pointer-events-none" />
+              <div className="relative z-10">
+                <div className="flex items-center gap-2 mb-6">
+                  <span className="w-2 h-2 bg-crimson animate-pulse" />
+                  <span className="font-body font-bold text-[10px] text-crimson uppercase tracking-[0.18em]">
+                    Breaking — Academic News
+                  </span>
+                </div>
+                <span className="font-body font-semibold text-[11px] text-white/40 uppercase tracking-widest mb-3 block">
+                  JUL 15, 2026 · Admissions
+                </span>
+                <h3 className="font-display text-[clamp(28px,3vw,40px)] leading-tight text-white mb-5">
+                  2026/2027 Academic Admissions Are Now Open
+                </h3>
+                <p className="font-body font-light text-[16px] text-white/70 leading-relaxed max-w-lg mb-8">
+                  Platform College is pleased to announce that applications for the 2026/2027 academic session are officially open. 
+                  Places are limited — Cambridge AS &amp; A Level, A' Level Direct Entry, and Foundation Programme seats are being filled now. 
+                  Early applications are strongly encouraged to avoid disappointment.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 border-t border-white/10 pt-8">
+                  {[
+                    { label: "Applications", value: "Now Open" },
+                    { label: "Session Start", value: "September 2026" },
+                    { label: "Exam Series", value: "May / June 2027" },
+                  ].map((item) => (
+                    <div key={item.label}>
+                      <p className="font-body font-bold text-[10px] text-white/40 uppercase tracking-wider mb-1">{item.label}</p>
+                      <p className="font-body font-semibold text-[15px] text-white">{item.value}</p>
+                    </div>
+                  ))}
+                </div>
+                <Link
+                  href="/admissions"
+                  className="inline-flex items-center gap-3 font-body font-bold text-[14px] text-white bg-crimson px-6 py-3 hover:bg-crimson/80 transition-colors"
+                >
+                  Begin Your Application <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Side Cards */}
+            <div className="flex flex-col gap-4">
+              <motion.div
+                {...fadeUp(0.08)}
+                className="bg-white border border-hairline p-7 flex flex-col gap-4 flex-1 group hover:border-navy transition-colors"
+              >
+                <span className="font-body font-bold text-[10px] text-crimson uppercase tracking-[0.16em]">
+                  JUN 2026 · Academic
+                </span>
+                <h4 className="font-display text-[22px] text-navy leading-tight group-hover:text-crimson transition-colors">
+                  100% Cambridge Pass Rate Maintained for 2025/26 Session
+                </h4>
+                <p className="font-body text-[13px] text-iron leading-relaxed">
+                  Platform College is proud to report a perfect pass rate across all Cambridge examinations for the 2025/2026 academic session, with multiple A* and A grades secured.
+                </p>
+                <Link href="/admissions" className="mt-auto inline-flex items-center gap-1.5 font-body font-semibold text-[13px] text-royal hover:gap-3 transition-all">
+                  Learn more <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </motion.div>
+
+              <motion.div
+                {...fadeUp(0.14)}
+                className="bg-crimson text-white p-7 flex flex-col gap-4 flex-1 group"
+              >
+                <span className="font-body font-bold text-[10px] text-white/60 uppercase tracking-[0.16em]">
+                  Key Deadline
+                </span>
+                <h4 className="font-display text-[22px] text-white leading-tight">
+                  Entrance Assessments Are Ongoing
+                </h4>
+                <p className="font-body text-[13px] text-white/80 leading-relaxed">
+                  Written assessments for 2026/2027 admission are rolling. Book your slot before places run out.
+                </p>
+                <Link href="/admissions" className="mt-auto inline-flex items-center gap-1.5 font-body font-bold text-[13px] text-white border border-white/30 px-4 py-2 hover:bg-white/10 transition-colors w-fit">
+                  Apply <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ══════════════════════════════════════════
           ADMISSIONS CTA

@@ -44,8 +44,8 @@ In addition to international placements, our Direct Entry A-Level programme has 
     id: "admissions-open-2026-2027",
     cat: "Admissions",
     title: "Admissions Open for 2026/2027 A-Level Academic Year",
-    date: "FEB 10, 2026",
-    excerpt: "Applications are now being accepted for the 2026/2027 academic year. Limited places available for AS & A Level programmes.",
+    date: "JUL 15, 2026",
+    excerpt: "Applications are now being accepted for the 2026/2027 academic year. Limited places available for Cambridge AS & A Level, A' Level Direct Entry, and University Foundation programmes.",
     content: `Platform College is pleased to announce that admissions are now open for the 2026/2027 academic year. We are accepting applications for our Cambridge AS & A Level programmes, including the traditional 2-year pathway, the accelerated 1-year option, and our Direct Entry A-Level programme.
 
 Prospective students and their families are invited to visit our campus for a guided tour and to learn more about our unique approach to A-Level education. Entrance assessments are being scheduled throughout the coming months.
@@ -53,7 +53,7 @@ Prospective students and their families are invited to visit our campus for a gu
 Our admissions process is straightforward: submit an application, complete an entrance assessment in English and Mathematics, attend an interview with the Head of College, and receive your offer within five working days.
 
 "We are looking for motivated students who are ready to challenge themselves academically," said the Head of College. "If you have the ambition to study at the world's best universities, Platform College will give you the foundation to succeed."`,
-    featured: false,
+    featured: true,
   },
   {
     id: "cambridge-accreditation",
