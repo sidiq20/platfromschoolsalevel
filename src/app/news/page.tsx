@@ -12,11 +12,7 @@ const fade = (delay = 0) => ({
   transition: { duration: 0.5, delay, ease: [0.23, 1, 0.32, 1] as [number, number, number, number] },
 });
 
-const CATEGORIES = ["All", "Admissions", "Results", "Academics", "Events"];
-
 export default function NewsPage() {
-  const [activeCategory, setActiveCategory] = useState("All");
-
   // Pin the admissions-open article to top as featured
   const featuredId = "admissions-open-2026-2027";
   const featured = newsArticles.find((a) => a.id === featuredId) ?? newsArticles[0];
