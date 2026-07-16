@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Newspaper } from "lucide-react";
@@ -23,11 +22,6 @@ export default function NewsPage() {
   const featured = newsArticles.find((a) => a.id === featuredId) ?? newsArticles[0];
   const rest = newsArticles.filter((a) => a.id !== featured.id);
 
-  const filtered =
-    activeCategory === "All"
-      ? rest
-      : rest.filter((a) => a.cat === activeCategory);
-
   return (
     <div className="pt-[68px] bg-white min-h-screen">
       {/* ── Hero ── */}
@@ -49,7 +43,7 @@ export default function NewsPage() {
             {...fade(0.12)}
             className="font-body font-light text-[18px] text-iron mt-6 max-w-xl leading-relaxed"
           >
-            Admissions updates, academic results, events and everything happening at Platform College.
+            Admissions updates and everything happening at Platform College.
           </motion.p>
         </div>
       </section>
@@ -132,37 +126,20 @@ export default function NewsPage() {
         </motion.div>
       </section>
 
-      {/* ── Category Filter + Grid ── */}
+      {/* ── Article Grid ── */}
       <section className="bg-off-white border-t border-hairline py-20 px-6 lg:px-10">
         <div className="max-w-[1280px] mx-auto">
-          {/* Filter pills */}
-          <div className="flex flex-wrap gap-2 mb-12">
-            {CATEGORIES.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`px-5 py-2 font-body font-semibold text-[12px] uppercase tracking-widest border transition-all ${
-                  activeCategory === cat
-                    ? "bg-navy text-white border-navy"
-                    : "bg-white text-iron border-hairline hover:border-navy hover:text-navy"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-
           {/* Article grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {filtered.map((article, i) => (
+            {rest.map((article, i) => (
               <ArticleCard key={article.id} article={article} delay={i * 0.06} />
             ))}
           </div>
 
-          {filtered.length === 0 && (
+          {rest.length === 0 && (
             <div className="text-center py-24">
               <p className="font-body text-[15px] text-smoke">
-                No articles in this category yet.
+                No news articles at the moment.
               </p>
             </div>
           )}
