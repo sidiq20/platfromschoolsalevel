@@ -102,8 +102,10 @@ export default function Home() {
               <p className="font-body text-iron mb-6 leading-relaxed">
                 Build confidence, develop new skills, and form lasting friendships at this year’s Summer Camp.
               </p>
-              <Button size="lg" className="w-full shadow-xl">
-                Register Now
+              <Button size="lg" className="w-full shadow-xl" asChild>
+                <Link href="/contact" onClick={() => setShowModal(false)}>
+                  Register Now
+                </Link>
               </Button>
             </motion.div>
           </div>
