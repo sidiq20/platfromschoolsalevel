@@ -2,8 +2,8 @@ import { MetadataRoute } from 'next'
 import { programmes } from '@/data/programmes'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Fallback to Vercel domain or use custom env variable
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://platfromschoolsalevel.vercel.app";
+  // Fallback to custom domain or use custom env variable
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.platformcollege.org";
 
   const routes = [
     { url: '', priority: 1, freq: 'yearly' },

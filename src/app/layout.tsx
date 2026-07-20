@@ -4,8 +4,8 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import "./globals.css";
 
-// Fallback to Vercel domain or use custom env variable
-const domain = process.env.NEXT_PUBLIC_SITE_URL || "https://platfromschoolsalevel.vercel.app";
+// Fallback to custom domain or use custom env variable
+const domain = process.env.NEXT_PUBLIC_SITE_URL || "https://www.platformcollege.org";
 
 export const metadata: Metadata = {
   metadataBase: new URL(domain),
@@ -89,13 +89,13 @@ export default function RootLayout({
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window,document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '1941956419842145'); 
+            fbq('init', '1263765479125959'); 
             fbq('track', 'PageView');
           `}
         </Script>
         <noscript>
           <img height="1" width="1" style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=1941956419842145&ev=PageView&noscript=1"
+            src="https://www.facebook.com/tr?id=1263765479125959&ev=PageView&noscript=1"
           />
         </noscript>
       </head>
